@@ -24,6 +24,16 @@ article.post
     ol
       li Item 1
       li Item 2
+    pre
+      code.ruby
+        | class Article
+        |   include Anima.new(:title, :content, :tags)
+        | end
+        | article = Article.new(
+        |   title: 'Ruby is awesome',
+        |   content: '...',
+        |   tags: ['Ruby']
+        | )
   p.post-meta
     time.post-date(datetime="2014-10-09T20:40:14") 9. Oktober 2014
     | &nbsp;&middot;&nbsp;
