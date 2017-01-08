@@ -16,8 +16,8 @@ gulp.task('bower', ->
 gulp.task('sass', ['bower'], ->
   vendorFiles = gulp.src('./bower_components/normalize.css/normalize.css')
 
-  applicationFiles = gulp.src('./assets/styles/**/*.sass')
-    .pipe(sass({indentedSyntax: true, sourceComments: 'normal'}))
+  applicationFiles = gulp.src('./assets/styles/**/*.scss')
+    .pipe(sass({sourceComments: 'normal'}))
 
   es.concat(vendorFiles, applicationFiles)
     .pipe(concat('webcodr.css'))
@@ -43,7 +43,7 @@ gulp.task('server', ['build'], ->
 )
 
 gulp.task('watch', ['server'], ->
-  gulp.watch('./assets/**/*.sass', ['sass'])
+  gulp.watch('./assets/**/*.scss', ['sass'])
   gulp.watch('./templates/**/*.jade', ['jade'])
 )
 
