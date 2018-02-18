@@ -10,7 +10,7 @@
   color: #aaa;
   letter-spacing: 0.1em;
   font-size: 14px;
-  margin: 2em 0;
+  margin: 0 0 2em 0;
   padding: 0.2em 10px;
 }
 
@@ -20,6 +20,12 @@
 
 .post-link--meta {
   color: inherit;
+}
+
+.post-language {
+  position: relative;
+  top: 2px;
+  font-size: 17px;
 }
 
 .post-headline {

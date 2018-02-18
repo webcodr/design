@@ -1,0 +1,25 @@
+.pagination {
+  display: flex;
+}
+
+.pagination__item {
+  flex-direction: row;
+  width: 50%;
+}
+
+.pagination__item-position-prev {
+  text-align: left;
+}
+
+.pagination__item-position-next {
+  text-align: right;
+}
+
+.pagination__link {
+  color: #657b83;
+  text-decoration: none;
+}
+
+.pagination__link:hover {
+  color: #ff4e00;
+}
