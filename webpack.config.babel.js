@@ -2,6 +2,7 @@ import webpack from 'webpack'
 import path from 'path'
 import autoprefixer from 'autoprefixer'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import BrowserSyncPlugin from 'browser-sync-webpack-plugin'
 
 let extractStyles = new ExtractTextPlugin('[name].css')
 let extractHtml = new ExtractTextPlugin('[name].html')
@@ -67,7 +68,17 @@ let config = {
   },
   plugins: [
     extractStyles,
-    extractHtml
+    extractHtml,
+    new BrowserSyncPlugin(
+      {
+        host: 'localhost',
+        port: 3000,
+        proxy: 'http://localhost:8081/'
+      },
+      {
+        reload: true
+      }
+    )
   ]
 }
 
