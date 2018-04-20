@@ -17,6 +17,9 @@ let config = {
     ],    
     'css/application': [
       path.resolve(__dirname, 'assets/styles/application.scss')
+    ],
+    'js/application': [
+        path.resolve(__dirname, 'assets/js/application.js')
     ]
   },
   output: {
@@ -25,6 +28,18 @@ let config = {
   },
   module: {
     rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules\/*/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: [['es2015', { modules: false }]]
+            }
+          }
+        ]
+      },
       {
         test: /\.pug$/,
         use: extractHtml.extract({
@@ -56,7 +71,8 @@ let config = {
               loader: 'sass-loader',
               options: {
                 includePaths: [
-                  path.resolve(__dirname, 'node_modules/sanitize.css/')
+                  path.resolve(__dirname, 'node_modules/sanitize.css/'),
+                  path.resolve(__dirname, 'node_modules/highlight.js/styles/')
                 ]
               }
             }
