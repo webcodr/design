@@ -16,10 +16,10 @@
 }
 
 .pagination__link {
-  color: #657b83;
+  color: $post-text-color;
   text-decoration: none;
 }
 
 .pagination__link:hover {
-  color: #ff4e00;
+  color: $headline-seconday-color;
 }

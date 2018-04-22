@@ -1,4 +1,5 @@
 @import 'sanitize';
+@import 'base/colors';
 
 * {
   box-sizing: border-box;
@@ -8,7 +9,7 @@ html {
   font-family: Roboto, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #4A4A4A;
+  color: $post-text-color;
 }
 
 @import "components/headlines";

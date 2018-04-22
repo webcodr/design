@@ -7,7 +7,7 @@
 }
 
 .post-meta {
-  color: #9B9B9B;
+  color: $post-meta-text-color;
   letter-spacing: 0.1em;
   font-size: 16px;
   margin: 0 0 1em 0;
@@ -48,14 +48,9 @@
   }
 
   a {
-    color: #8925E7;
+    color: $post-text-color;
     text-decoration: none;
-    border-bottom: 2px solid #8925E7;
-
-    &:hover {
-      color: #FF3E81;
-      border-color: #FF3E81;
-    }
+    border-bottom: 2px solid $post-text-color;
   }
 
   li {
@@ -63,7 +58,7 @@
   }
 
   blockquote {
-    border-left: 4px solid #8925E7;
+    border-left: 4px solid $blockquote-border-color;
     margin: 1.5em 0 0 1.5em;
     padding: 0 1.5em;
     font-style: italic;
@@ -74,7 +69,6 @@
   }
 
   code {
-    margin: 0 10px;
     border-radius: 5px;
     font-family: "Droid Sans Mono", monospace;
     font-size: 14px;
@@ -84,7 +78,8 @@
   p, ul {
     code {
       padding: 0.2em 0.3em;
-      background-color: #f7f7f7;
+      background-color: $code-background-color;
+      color: $code-text-color;
     }
   }
 }

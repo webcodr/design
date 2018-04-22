@@ -1,5 +1,5 @@
 h1, h2, h3, h4, h5, h6 {
-  color: #8925E7;
+  color: $headline-base-color;
   font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
   font-weight: 700;
   margin: 1em 0;
@@ -8,12 +8,12 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 36px;
-  color: #FF3E81;
+  color: $headline-seconday-color;
 }
 
 h2 {
   font-size: 28px;
-  color: #BD10E0;
+  color: $headline-tertiary-color;
 }
 
 h3 {

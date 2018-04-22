@@ -1,6 +1,7 @@
 import hljs from 'highlight.js/lib/highlight'
 import apache from 'highlight.js/lib/languages/apache'
 import bash from 'highlight.js/lib/languages/bash'
+import css from 'highlight.js/lib/languages/css'
 import markdown from 'highlight.js/lib/languages/markdown'
 import dockerfile from 'highlight.js/lib/languages/dockerfile'
 import go from 'highlight.js/lib/languages/go'
@@ -19,6 +20,7 @@ import typescript from 'highlight.js/lib/languages/typescript'
 
 hljs.registerLanguage('apache', apache)
 hljs.registerLanguage('bash', bash)
+hljs.registerLanguage('css', css)
 hljs.registerLanguage('markdown', markdown)
 hljs.registerLanguage('dockerfile', dockerfile)
 hljs.registerLanguage('go', go)
