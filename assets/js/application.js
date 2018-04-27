@@ -17,6 +17,7 @@ import scss from 'highlight.js/lib/languages/scss'
 import swift from 'highlight.js/lib/languages/swift'
 import yaml from 'highlight.js/lib/languages/yaml'
 import typescript from 'highlight.js/lib/languages/typescript'
+import xml from 'highlight.js/lib/languages/xml'
 
 hljs.registerLanguage('apache', apache)
 hljs.registerLanguage('bash', bash)
@@ -35,5 +36,6 @@ hljs.registerLanguage('php', php)
 hljs.registerLanguage('scss', scss)
 hljs.registerLanguage('yaml', yaml)
 hljs.registerLanguage('typescript', typescript)
+hljs.registerLanguage('xml', xml)
 
 hljs.initHighlightingOnLoad()
