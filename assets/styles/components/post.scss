@@ -68,6 +68,10 @@
     max-width: 100%;
   }
 
+  pre {
+    margin: 1em 10px;
+  }
+
   code {
     border-radius: 5px;
     font-family: "Droid Sans Mono", monospace;
@@ -90,6 +94,10 @@
   }
 
   .post-content {
+    pre {
+      margin: 1em 0;
+    }
+
     code {
       margin: 0;
     }
