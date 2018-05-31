@@ -14,7 +14,7 @@ let config = {
     ],
     post: [
       path.resolve(__dirname, 'templates/post.pug')
-    ],    
+    ],
     'css/application': [
       path.resolve(__dirname, 'assets/styles/application.scss')
     ],
@@ -28,6 +28,10 @@ let config = {
   },
   module: {
     rules: [
+      {
+        test: /\.(woff|woff2)$/,
+        loader: 'file-loader?name=../fonts/[name].[ext]'
+      },
       {
         test: /\.js$/,
         exclude: /node_modules\/*/,
