@@ -1,12 +1,12 @@
-import webpack from 'webpack'
-import path from 'path'
-import autoprefixer from 'autoprefixer'
-import ExtractTextPlugin from 'extract-text-webpack-plugin'
+const webpack = require('webpack')
+const path = require('path')
+const autoprefixer = require('autoprefixer')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
-let extractStyles = new ExtractTextPlugin('[name].css')
-let extractHtml = new ExtractTextPlugin('[name].html')
+const extractStyles = new ExtractTextPlugin('[name].css')
+const extractHtml = new ExtractTextPlugin('[name].html')
 
-let config = {
+const config = {
   mode: 'production',
   entry: {
     index: [
@@ -14,9 +14,12 @@ let config = {
     ],
     post: [
       path.resolve(__dirname, 'templates/post.pug')
-    ],    
+    ],
     'css/application': [
       path.resolve(__dirname, 'assets/styles/application.scss')
+    ],
+    'js/application': [
+        path.resolve(__dirname, 'assets/js/application.js')
     ]
   },
   output: {
@@ -25,6 +28,19 @@ let config = {
   },
   module: {
     rules: [
+      {
+        test: /\.(woff|woff2)$/,
+        loader: 'file-loader'
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules\/*/,
+        use: [
+          {
+            loader: 'babel-loader'
+          }
+        ]
+      },
       {
         test: /\.pug$/,
         use: extractHtml.extract({
@@ -45,22 +61,21 @@ let config = {
               loader: 'postcss-loader',
               options: {
                 plugins: [
-                  autoprefixer({
-                    browsers: [
-                      'last 2 version',
-                      'Explorer >= 10',
-                      'Android >= 4'
-                    ]
-                  })
+                  autoprefixer()
                 ]
               }
             },
             {
               loader: 'sass-loader',
               options: {
-                includePaths: [
-                  path.resolve(__dirname, 'node_modules/sanitize.css/')
-                ]
+                sassOptions: context => {
+                  return {
+                    includePaths: [
+                      path.resolve(__dirname, 'node_modules/sanitize.css/'),
+                      path.resolve(__dirname, 'node_modules/highlight.js/styles')
+                    ]
+                  }
+                }
               }
             }
           ]
@@ -74,4 +89,4 @@ let config = {
   ]
 }
 
-export default config
+module.exports = config

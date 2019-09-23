@@ -1,4 +1,6 @@
 @import 'sanitize';
+@import 'base/colors';
+@import 'base/fonts';
 
 * {
   box-sizing: border-box;
@@ -8,6 +10,7 @@ html {
   font-family: Roboto, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: $post-text-color;
 }
 
 @import "components/headlines";
@@ -16,3 +19,5 @@ html {
 @import "components/container";
 @import "components/post";
 @import "components/pagination";
+
+@import 'atom-one-dark';

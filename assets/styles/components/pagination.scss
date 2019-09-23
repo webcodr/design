@@ -1,5 +1,6 @@
 .pagination {
   display: flex;
+  margin: 0 10px;
 }
 
 .pagination__item {
@@ -16,10 +17,16 @@
 }
 
 .pagination__link {
-  color: #657b83;
+  color: $post-text-color;
   text-decoration: none;
 }
 
 .pagination__link:hover {
-  color: #ff4e00;
+  color: $headline-seconday-color;
+}
+
+@media screen and (min-width: 640px) {
+  .pagination {
+    margin: 0;
+  }
 }

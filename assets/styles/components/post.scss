@@ -7,10 +7,10 @@
 }
 
 .post-meta {
-  color: #aaa;
+  color: $post-meta-text-color;
   letter-spacing: 0.1em;
-  font-size: 14px;
-  margin: 0 0 2em 0;
+  font-size: 16px;
+  margin: 0 0 1em 0;
   padding: 0.2em 10px;
 }
 
@@ -29,7 +29,7 @@
 }
 
 .post-headline {
-  margin: 0 0 0.5ex 0;
+  margin: 0 0 0.75em 0;
   line-height: 1em;
 }
 
@@ -48,14 +48,9 @@
   }
 
   a {
-    color: #657b83;
+    color: $post-text-color;
     text-decoration: none;
-    border-bottom: 2px solid #657b83;
-
-    &:hover {
-      color: #ff4e00;
-      border-color: #ff4e00;
-    }
+    border-bottom: 2px solid $post-text-color;
   }
 
   li {
@@ -63,21 +58,23 @@
   }
 
   blockquote {
-    border-left: 4px solid #657b83;
-    margin: 1.5em;
+    border-left: 4px solid $blockquote-border-color;
+    margin: 1.5em 0 0 1.5em;
     padding: 0 1.5em;
     font-style: italic;
-    color: #4f525a;
   }
 
   img {
     max-width: 100%;
   }
 
+  pre {
+    margin: 1em 10px;
+  }
+
   code {
-    margin: 0 10px;
     border-radius: 5px;
-    font-family: "Droid Sans Mono", monospace;
+    font-family: "Roboto Mono", monospace;
     font-size: 14px;
     line-height: 1.5em;
   }
@@ -85,7 +82,8 @@
   p, ul {
     code {
       padding: 0.2em 0.3em;
-      background-color: #f7f7f7;
+      background-color: $code-background-color;
+      color: $code-text-color;
     }
   }
 }
@@ -96,6 +94,10 @@
   }
 
   .post-content {
+    pre {
+      margin: 1em 0;
+    }
+
     code {
       margin: 0;
     }
