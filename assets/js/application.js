@@ -19,6 +19,14 @@ import yaml from 'highlight.js/lib/languages/yaml'
 import typescript from 'highlight.js/lib/languages/typescript'
 import xml from 'highlight.js/lib/languages/xml'
 
+const preferColorSchemeResult = window.matchMedia('(prefers-color-scheme: dark)')
+
+if (preferColorSchemeResult && preferColorSchemeResult.matches === true) {
+  document.documentElement.setAttribute('data-theme', 'dark')
+} else {
+  document.documentElement.setAttribute('data-theme', 'light')
+}
+
 hljs.registerLanguage('apache', apache)
 hljs.registerLanguage('bash', bash)
 hljs.registerLanguage('css', css)

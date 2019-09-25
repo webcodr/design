@@ -17,12 +17,12 @@
 }
 
 .pagination__link {
-  color: $post-text-color;
+  color: var(--post-text-color);
   text-decoration: none;
 }
 
 .pagination__link:hover {
-  color: $headline-seconday-color;
+  color: var(--hheadline-seconday-color);
 }
 
 @media screen and (min-width: 640px) {
