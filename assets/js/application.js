@@ -44,7 +44,7 @@ const setPreferredTheme = (name) => {
   document.documentElement.setAttribute('data-theme', name)
 }
 
-window.togglePreferredTheme = () => {
+const togglePreferredTheme = () => {
   preferredTheme = preferredTheme === 'dark' ? 'light' : 'dark'
   setPreferredTheme(preferredTheme)
   document.querySelector('#toggle-checkbox').checked = preferredTheme === 'dark'
@@ -55,6 +55,8 @@ setPreferredTheme(preferredTheme)
 
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelector('#toggle-checkbox').checked = preferredTheme === 'dark'
+  document.querySelector('#theme-toggle').addEventListener('click', togglePreferredTheme)
+  document.querySelector('#toggle-checkbox').addEventListener('click', togglePreferredTheme)
 })
 
 hljs.registerLanguage('apache', apache)

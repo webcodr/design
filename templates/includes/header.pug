@@ -3,8 +3,9 @@
       p.header-title
          a.header-link(href="#home") webcodr
 
-      .theme-toggle(onclick="togglePreferredTheme()")
-         span.theme-toggle__desc Dark Mode
-         label.toggle(for="toggle-checkbox")
-            input(type="checkbox" id="toggle-checkbox" onclick="togglePreferredTheme()")
-            span.slider
+      .theme-toggle
+         .theme-toggle__wrapper#theme-toggle
+            span.theme-toggle__desc Dark Mode
+            label.toggle(for="toggle-checkbox")
+               input(type="checkbox" id="toggle-checkbox")
+               span.slider

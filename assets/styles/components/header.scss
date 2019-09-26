@@ -17,8 +17,12 @@
   display: flex;
   margin-top: 1em;
   margin-right: 10px;
-  align-items: center;
   justify-content: flex-end;
+}
+
+.theme-toggle__wrapper {
+  display: flex;
+  align-items: center;
   cursor: pointer;
 }
 
