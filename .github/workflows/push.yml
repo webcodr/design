@@ -9,4 +9,4 @@ jobs:
     - name: Jest
       uses: stefanoeb/jest-action@master
       with:
-        args: '**.spec.js --ci'
+        args: '--ci'
