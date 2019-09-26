@@ -20,10 +20,10 @@ import typescript from 'highlight.js/lib/languages/typescript'
 import xml from 'highlight.js/lib/languages/xml'
 
 const getPreferredTheme = () => {
-  const preferrefThemeFromLocalStorage = localStorage.getItem('preferredTheme')
+  const preferredThemeFromLocalStorage = localStorage.getItem('preferredTheme')
 
-  if (preferrefThemeFromLocalStorage) {
-    return preferrefThemeFromLocalStorage
+  if (preferredThemeFromLocalStorage) {
+    return preferredThemeFromLocalStorage
   } else {
     return getPreferredThemeFromSettings()
   }
