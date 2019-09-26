@@ -19,13 +19,43 @@ import yaml from 'highlight.js/lib/languages/yaml'
 import typescript from 'highlight.js/lib/languages/typescript'
 import xml from 'highlight.js/lib/languages/xml'
 
-const preferColorSchemeResult = window.matchMedia('(prefers-color-scheme: dark)')
+const getPreferredTheme = () => {
+  const preferrefThemeFromLocalStorage = localStorage.getItem('preferredTheme')
 
-if (preferColorSchemeResult && preferColorSchemeResult.matches === true) {
-  document.documentElement.setAttribute('data-theme', 'dark')
-} else {
-  document.documentElement.setAttribute('data-theme', 'light')
+  if (preferrefThemeFromLocalStorage) {
+    return preferrefThemeFromLocalStorage
+  } else {
+    return getPreferredThemeFromSettings()
+  }
 }
+
+const getPreferredThemeFromSettings = () => {
+  const preferColorSchemeResult = window.matchMedia('(prefers-color-scheme: dark)')
+
+  if (preferColorSchemeResult && preferColorSchemeResult.matches === true) {
+    return 'dark'
+  } else {
+    return 'light'
+  }
+}
+
+const setPreferredTheme = (name) => {
+  localStorage.setItem('preferredTheme', name)
+  document.documentElement.setAttribute('data-theme', name)
+}
+
+window.togglePreferredTheme = () => {
+  preferredTheme = preferredTheme === 'dark' ? 'light' : 'dark'
+  setPreferredTheme(preferredTheme)
+  document.querySelector('#toggle-checkbox').checked = preferredTheme === 'dark'
+}
+
+let preferredTheme = getPreferredTheme()
+setPreferredTheme(preferredTheme)
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelector('#toggle-checkbox').checked = preferredTheme === 'dark'
+})
 
 hljs.registerLanguage('apache', apache)
 hljs.registerLanguage('bash', bash)

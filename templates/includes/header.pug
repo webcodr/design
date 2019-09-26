@@ -2,3 +2,9 @@
    header.header
       p.header-title
          a.header-link(href="#home") webcodr
+
+      .theme-toggle(onclick="togglePreferredTheme()")
+         span.theme-toggle__desc Dark Mode
+         label.toggle(for="toggle-checkbox")
+            input(type="checkbox" id="toggle-checkbox" onclick="togglePreferredTheme()")
+            span.slider
