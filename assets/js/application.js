@@ -18,43 +18,17 @@ import swift from 'highlight.js/lib/languages/swift'
 import yaml from 'highlight.js/lib/languages/yaml'
 import typescript from 'highlight.js/lib/languages/typescript'
 import xml from 'highlight.js/lib/languages/xml'
+import {
+  getPreferredTheme,
+  getPreferredThemeFromSettings,
+  setPreferredTheme,
+  togglePreferredTheme
+} from './theme'
 
-const getPreferredTheme = () => {
-  const preferredThemeFromLocalStorage = localStorage.getItem('preferredTheme')
-
-  if (preferredThemeFromLocalStorage) {
-    return preferredThemeFromLocalStorage
-  } else {
-    return getPreferredThemeFromSettings()
-  }
-}
-
-const getPreferredThemeFromSettings = () => {
-  const preferColorSchemeResult = window.matchMedia('(prefers-color-scheme: dark)')
-
-  if (preferColorSchemeResult && preferColorSchemeResult.matches === true) {
-    return 'dark'
-  } else {
-    return 'light'
-  }
-}
-
-const setPreferredTheme = (name) => {
-  localStorage.setItem('preferredTheme', name)
-  document.documentElement.setAttribute('data-theme', name)
-}
-
-const togglePreferredTheme = () => {
-  preferredTheme = preferredTheme === 'dark' ? 'light' : 'dark'
-  setPreferredTheme(preferredTheme)
-  document.querySelector('#toggle-checkbox').checked = preferredTheme === 'dark'
-}
-
-let preferredTheme = getPreferredTheme()
-setPreferredTheme(preferredTheme)
+setPreferredTheme(getPreferredTheme())
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelector('#toggle-checkbox').checked = preferredTheme === 'dark'
+  document.querySelector('#toggle-checkbox').checked = getPreferredTheme() === 'dark'
   document.querySelector('#theme-toggle').addEventListener('click', togglePreferredTheme)
   document.querySelector('#toggle-checkbox').addEventListener('click', togglePreferredTheme)
 })
