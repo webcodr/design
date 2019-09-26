@@ -1,0 +1,12 @@
+on: push
+name: Run Unit Tests
+jobs:
+  jest:
+    name: Jest
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Jest
+      uses: stefanoeb/jest-action@master
+      with:
+        args: '**.spec.js --ci'
