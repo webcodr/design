@@ -64,8 +64,7 @@ const config = {
                 sassOptions: context => {
                   return {
                     includePaths: [
-                      path.resolve(__dirname, 'node_modules/sanitize.css/'),
-                      path.resolve(__dirname, 'node_modules/highlight.js/styles')
+                      path.resolve(__dirname, 'node_modules/sanitize.css/')
                     ]
                   }
                 }
