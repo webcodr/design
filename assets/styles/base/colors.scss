@@ -16,7 +16,7 @@ $c_magenta: #FF3E81;
   --post-text-color: #{$c_dark-grey};
   --post-meta-text-color: #{$c_medium-grey};
 
-  --headline-base-color: #{$c_dark-purple};
+  --headline-base-color: #{lighten($c_dark-purple, 10%)};
   --headline-seconday-color: #{$c_magenta};
   --headline-tertiary-color: #{$c_medium-purple};
 
@@ -30,5 +30,5 @@ $c_magenta: #FF3E81;
   --container-background-color: #{darken($c_dark-grey, 20%)};
   --post-text-color: #{$c_white};
   --code-background-color: #{$c_dark-grey};
-  --code-text-color: #{$c_magenta};
+  --code-text-color: #{$c_white};
 }
