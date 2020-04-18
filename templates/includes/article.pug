@@ -29,13 +29,8 @@ article.post
     ol
       li Item 1
       li Item 2
-    pre
-      code.ruby
-        | class Article
-        |   include Anima.new(:title, :content, :tags)
-        | end
-        | article = Article.new(
-        |   title: 'Ruby is awesome',
-        |   content: '...',
-        |   tags: ['Ruby']
-        | )
+    <div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="p">{</span> <span class="nx">shallow</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@vue/test-utils'</span>
+    <span class="k">import</span> <span class="nx">fetchMock</span> <span class="nx">from</span> <span class="s1">'fetch-mock'</span>
+    <span class="k">import</span> <span class="nx">flushPromises</span> <span class="nx">from</span> <span class="s1">'flush-promises'</span>
+    <span class="k">import</span> <span class="nx">Demo</span> <span class="nx">from</span> <span class="s1">'@/components/Demo.vue'</span>
+    </code></pre></div>

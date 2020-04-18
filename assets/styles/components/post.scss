@@ -72,8 +72,12 @@
     margin: 1em 10px;
   }
 
-  code {
-    border-radius: 5px;
+  .chroma code {
+    position: relative;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding: 32px;
+    border-radius: 0;
     font-family: "Roboto Mono", monospace;
     font-size: 14px;
     line-height: 1.5em;
@@ -81,11 +85,23 @@
 
   p, ul {
     code {
+      border-radius: 5px;
       padding: 0.2em 0.3em;
       background-color: var(--code-background-color);
       color: var(--code-text-color);
     }
   }
+}
+
+.post-content--language {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: right;
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 640px) {
@@ -105,5 +121,12 @@
     p {
       padding: 0;
     }
+
+    .chroma code {
+      border-radius: 5px;
+      margin-left: -32px;
+      margin-right: -32px;
+    }
   }
+
 }
