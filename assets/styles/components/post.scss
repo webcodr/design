@@ -95,7 +95,7 @@
   }
 
   table {
-    width: 100%;
+    margin: 0 10px;
   }
 
   th {
@@ -130,8 +130,12 @@
       margin: 1em 0;
     }
 
-    code {
+    code, table {
       margin: 0;
+    }
+
+    table {
+      width: 100%;
     }
 
     p {
