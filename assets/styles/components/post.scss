@@ -88,8 +88,24 @@
       border-radius: 5px;
       padding: 0.2em 0.3em;
       background-color: var(--code-background-color);
-      color: var(--code-text-color);
+      color: var(--headline-seconday-color);
+      font-family: "Roboto Mono", monospace;
+      font-size: 16px;
     }
+  }
+
+  table {
+    width: 100%;
+  }
+
+  th {
+    text-align: left;
+    border-bottom: 1px solid var(--post-text-color);
+    color: var(--headline-tertiary-color);
+  }
+
+  th, td {
+    padding: 5px;
   }
 }
 
