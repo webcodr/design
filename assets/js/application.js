@@ -3,9 +3,9 @@ import {
   getPreferredThemeFromSettings,
   setPreferredTheme,
   togglePreferredTheme
-} from './theme'
+} from './theme.js'
 
-import { setLanguage } from './code-language'
+import { setLanguage } from './code-language.js'
 
 setPreferredTheme(getPreferredTheme())
 

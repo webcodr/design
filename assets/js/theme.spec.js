@@ -3,7 +3,7 @@ import {
   getPreferredThemeFromSettings,
   setPreferredTheme,
   togglePreferredTheme
-} from './theme'
+} from './theme.js'
 import expectExport from 'expect'
 
 global.matchMedia = jest.fn()

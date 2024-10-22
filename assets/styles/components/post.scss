@@ -70,10 +70,10 @@
 
   pre {
     margin: 1em 10px;
+    position: relative;
   }
 
   .chroma code {
-    position: relative;
     margin-left: -10px;
     margin-right: -10px;
     padding: 32px;
@@ -81,6 +81,8 @@
     font-family: "Roboto Mono", monospace;
     font-size: 14px;
     line-height: 1.5em;
+    scrollbar-color: var(--code-scrollback-background-color) var(--code-background-color);
+    scrollbar-width: thin;
   }
 
   p, ul {
@@ -88,7 +90,7 @@
       border-radius: 5px;
       padding: 0.2em 0.3em;
       background-color: var(--code-background-color);
-      color: var(--headline-seconday-color);
+      color: var(--code-text-color);
       font-family: "Roboto Mono", monospace;
       font-size: 16px;
     }
@@ -111,11 +113,12 @@
 
 .post-content--language {
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: 2px;
+  right: -24px;
   font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-size: 20px;
+  color: var(--code-text-color);
   text-align: right;
   text-transform: uppercase;
 }

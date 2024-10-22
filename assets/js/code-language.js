@@ -25,7 +25,7 @@ export const setLanguage = () => {
     nameElement.appendChild(textNode)
     nameElement.classList.add('post-content--language')
 
-    codeBlock.prepend(nameElement)
+    codeBlock.parentNode.prepend(nameElement)
   }
 }
 
