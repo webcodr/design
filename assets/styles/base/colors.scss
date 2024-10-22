@@ -20,8 +20,9 @@ $c_magenta: #FF3E81;
   --headline-seconday-color: #{$c_magenta};
   --headline-tertiary-color: #{$c_medium-purple};
 
-  --code-background-color: #{$c_light-grey};
-  --code-text-color: #{$c_magenta};
+  --code-background-color: #24273a;
+  --code-text-color: #f5a97f;
+  --code-scrollback-background-color: #4a4a4a;
 
   --blockquote-border-color: #{$c_dark-purple};
 }
@@ -29,6 +30,6 @@ $c_magenta: #FF3E81;
 [data-theme="dark"] {
   --container-background-color: #{darken($c_dark-grey, 20%)};
   --post-text-color: #{$c_white};
-  --code-background-color: #{$c_dark-grey};
-  --code-text-color: #{$c_white};
+  --code-background-color: #24273a;
+  --code-text-color: #f5a97f;
 }

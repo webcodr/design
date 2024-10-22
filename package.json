@@ -1,33 +1,20 @@
 {
   "name": "webcodr-design",
-  "version": "2.0.0",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "serve": "webpack-dev-server",
-    "build": "webpack --config webpack.config.prod.js",
-    "test": "jest"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.6.2",
-    "@babel/preset-env": "^7.6.2",
-    "autoprefixer": "^9.6.1",
-    "babel-jest": "^24.9.0",
-    "babel-loader": "^8.0.6",
-    "css-loader": "^3.2.0",
-    "csso-loader": "^0.3.1",
-    "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "file-loader": "^4.2.0",
-    "html-loader": "^0.5.5",
-    "jest": "^24.9.0",
-    "node-sass": "^4.9.0",
-    "postcss-loader": "^3.0.0",
-    "pug": "^2.0.3",
-    "pug-html-loader": "^1.1.5",
-    "pug-loader": "^2.4.0",
-    "sanitize.css": "^11.0.0",
-    "sass-loader": "^8.0.0",
-    "webpack": "4.41.0",
-    "webpack-cli": "^3.3.9",
-    "webpack-dev-server": "^3.8.1"
+    "vite": "^5.4.8"
+  },
+  "dependencies": {
+    "sanitize.css": "11",
+    "sass": "^1.80.3",
+    "vite-plugin-pug-transformer": "^1.0.5",
+    "vite-plugin-sass": "^0.1.0"
   }
 }
