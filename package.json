@@ -1,19 +1,17 @@
 {
   "name": "webcodr-design",
-  "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "devDependencies": {
+    "sanitize.css": "11",
+    "sass": "^1.80.3",
+    "vite": "^5.4.8",
+    "vite-plugin-pug-transformer": "^1.0.5"
+  },
+  "private": true,
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
-  "devDependencies": {
-    "vite": "^5.4.8"
-  },
-  "dependencies": {
-    "sanitize.css": "11",
-    "sass": "^1.80.3",
-    "vite-plugin-pug-transformer": "^1.0.5"
-  }
+  "type": "module"
 }
