@@ -5,7 +5,9 @@ export default defineConfig({
     plugins: [vitePugPlugin()],
     css: {
         preprocessorOptions: {
-            sass: {}
+            scss: {
+                api: 'modern-compiler' // or "modern"
+            }
         }
     },
     build: {

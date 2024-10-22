@@ -1,25 +1,12 @@
-@import 'sanitize.css';
-@import 'base/colors';
-@import 'base/fonts';
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  font-family: Roboto, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: var(--post-text-color);
-  background: var(--container-background-color);
-}
-
-@import "components/headlines";
-@import "components/header";
-@import "components/footer";
-@import "components/container";
-@import "components/post";
-@import "components/pagination";
-@import "components/toggle";
-
-@import "theme.css";
+@use 'sanitize.css';
+@use 'base/colors';
+@use 'base/fonts';
+@use 'base/default';
+@use "components/headlines";
+@use "components/header";
+@use "components/footer";
+@use "components/container";
+@use "components/post";
+@use "components/pagination";
+@use "components/toggle";
+@use "theme.css";

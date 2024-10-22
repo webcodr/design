@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--post-text-color);
+  background: var(--container-background-color);
+}
