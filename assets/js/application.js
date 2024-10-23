@@ -1,6 +1,5 @@
 import {
   getPreferredTheme,
-  getPreferredThemeFromSettings,
   setPreferredTheme,
   togglePreferredTheme
 } from './theme.js'

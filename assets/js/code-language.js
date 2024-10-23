@@ -1,11 +1,12 @@
 const languageAbbreviations = {
-  javascript: 'JS',
-  shell: 'sh'
+  javascript: 'js',
+  shell: 'sh',
+  kotlin: 'kt',
+  rust: 'rs',
+  golang: 'go'
 }
 
-const sanitanzeLanguageName = (language) => {
-  return languageAbbreviations[language.toLowerCase()] || language
-}
+const sanitizeLanguageName = (language) => languageAbbreviations[language.toLowerCase()] ??= language
 
 export const setLanguage = () => {
   const codeBlocks = document.querySelectorAll('[data-lang]')
@@ -16,11 +17,8 @@ export const setLanguage = () => {
 
   for (const codeBlock of codeBlocks) {
     const nameElement = document.createElement('span')
-    const textNode = document.createTextNode(
-      sanitanzeLanguageName(
-        codeBlock.getAttribute('data-lang')
-      )
-    )
+    const language = codeBlock.getAttribute('data-lang')
+    const textNode = document.createTextNode(sanitizeLanguageName(language))
 
     nameElement.appendChild(textNode)
     nameElement.classList.add('post-content--language')

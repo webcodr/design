@@ -1,12 +1,4 @@
-const getPreferredTheme = () => {
-  const preferredThemeFromLocalStorage = localStorage.getItem('preferredTheme')
-
-  if (preferredThemeFromLocalStorage) {
-    return preferredThemeFromLocalStorage
-  } else {
-    return getPreferredThemeFromSettings()
-  }
-}
+const getPreferredTheme = () => localStorage.getItem('preferredTheme') || getPreferredThemeFromSettings()
 
 const getPreferredThemeFromSettings = () => {
   const preferColorSchemeResult = window.matchMedia('(prefers-color-scheme: dark)')
@@ -31,7 +23,6 @@ const togglePreferredTheme = () => {
 
 export {
   getPreferredTheme,
-  getPreferredThemeFromSettings,
   setPreferredTheme,
   togglePreferredTheme
 }
