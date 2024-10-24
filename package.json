@@ -4,8 +4,7 @@
   "devDependencies": {
     "sanitize.css": "11",
     "sass": "^1.80.3",
-    "vite": "^5.4.8",
-    "vite-plugin-pug-transformer": "^1.0.5"
+    "vite": "^5.4.8"
   },
   "private": true,
   "scripts": {
