@@ -19,7 +19,7 @@
   right: 0;
   bottom: 0;
   background-color: var(--footer-text-color);
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .slider:before {
@@ -30,7 +30,7 @@
   left: 2px;
   bottom: 2px;
   background-color: white;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 input:checked + .slider {

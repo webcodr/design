@@ -81,7 +81,8 @@
     font-family: "Roboto Mono", monospace;
     font-size: 14px;
     line-height: 1.5em;
-    scrollbar-color: var(--code-scrollback-background-color) var(--code-background-color);
+    scrollbar-color: var(--code-scrollback-background-color)
+      var(--code-background-color);
     scrollbar-width: thin;
 
     .cl .p {
@@ -89,7 +90,9 @@
     }
   }
 
-  p, ul, ol {
+  p,
+  ul,
+  ol {
     code {
       border-radius: 5px;
       padding: 0.2em 0.3em;
@@ -110,7 +113,8 @@
     color: var(--headline-tertiary-color);
   }
 
-  th, td {
+  th,
+  td {
     padding: 5px;
   }
 }
@@ -137,7 +141,8 @@
       margin: 1em 0;
     }
 
-    code, table {
+    code,
+    table {
       margin: 0;
     }
 
