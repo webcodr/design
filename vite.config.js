@@ -1,5 +1,7 @@
 import { defineConfig } from 'vite';
 
+const fontRegex = /\.(ttf|otf|eot|woff|woff2)$/
+
 export default defineConfig({
     css: {
         preprocessorOptions: {
@@ -12,11 +14,12 @@ export default defineConfig({
         rollupOptions: {
             output: {
                 assetFileNames: (assetInfo) => {
-                    // Check the extension of the asset, adjust the regular expression as needed
-                    if (/\.(ttf|otf|eot|woff|woff2)$/.test(assetInfo.name)) {
-                        // Prevent renaming by returning the original file name
+                    // Check if asset is a font
+                    if (assetInfo.names.find(name => fontRegex.test(name))) {
+                        // Prevent renaming fonts by returning the original file name
                         return 'fonts/[name][extname]';
                     }
+
                     // Default behavior for other assets
                     return 'assets/[name].[hash][extname]';
                 },
