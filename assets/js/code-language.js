@@ -1,13 +1,10 @@
-const languageAbbreviations = {
-  javascript: "js",
-  shell: "sh",
-  kotlin: "kt",
-  rust: "rs",
-  golang: "go"
+const languageAliases = {
+  golang: "go",
+  sh: "bash"
 }
 
 const sanitizeLanguageName = (language) =>
-  (languageAbbreviations[language.toLowerCase()] ??= language)
+  (languageAliases[language.toLowerCase()] ??= language)
 
 export const setLanguage = () => {
   const codeBlocks = document.querySelectorAll("[data-lang]")
