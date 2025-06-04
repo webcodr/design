@@ -77,7 +77,7 @@
   .chroma code {
     margin-left: -10px;
     margin-right: -10px;
-    padding: 32px;
+    padding: 10px;
     border-radius: 0;
     font-family: "Roboto Mono", monospace;
     font-size: 18px;
@@ -121,9 +121,6 @@
 }
 
 .post-content--language {
-  position: absolute;
-  top: 2px;
-  right: -24px;
   font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-size: 20px;
@@ -156,9 +153,16 @@
     }
 
     .chroma code {
+      padding: 32px;
       border-radius: 5px;
       margin-left: -32px;
       margin-right: -32px;
     }
+  }
+
+  .post-content--language {
+    position: absolute;
+    top: 2px;
+    right: -24px;
   }
 }
