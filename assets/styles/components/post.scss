@@ -106,7 +106,6 @@
 
   table {
     width: 100%;
-    margin: 0 10px;
   }
 
   th {
@@ -118,6 +117,24 @@
   td {
     padding: 5px;
   }
+
+  tr {
+    th:first-child {
+      padding-left: 10px;
+    }
+
+    th:last-child {
+      padding-right: 10px;
+    }
+
+    td:first-child {
+      padding-left: 10px;
+    }
+
+    td:last-child {
+      padding-right: 10px;
+    }
+  }
 }
 
 .post-content--language {
@@ -125,7 +142,6 @@
   font-weight: bold;
   font-size: 20px;
   color: var(--code-text-color);
-  text-align: right;
   text-transform: uppercase;
 }
 
