@@ -9,8 +9,8 @@
 .post-meta {
   color: var(--post-meta-text-color);
   letter-spacing: 0.1em;
-  font-size: 16px;
-  margin: 0 0 1em 0;
+  font-size: 18px;
+  margin: 0 0 3em 0;
   padding: 0.2em 10px;
 }
 
@@ -29,7 +29,7 @@
 }
 
 .post-headline {
-  margin: 0 0 0.75em 0;
+  margin: 0 0 0.5em 0;
   line-height: 1em;
 }
 
@@ -39,7 +39,7 @@
 }
 
 .post-content {
-  font-size: 18px;
+  font-size: 22px;
   line-height: 1.8em;
 
   p {
@@ -80,7 +80,7 @@
     padding: 32px;
     border-radius: 0;
     font-family: "Roboto Mono", monospace;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 1.5em;
     scrollbar-color: var(--code-scrollback-background-color)
       var(--code-background-color);
@@ -132,7 +132,7 @@
   text-transform: uppercase;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 840px) {
   .post-meta {
     padding: 0.2em 0;
   }

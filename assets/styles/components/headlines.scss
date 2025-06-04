@@ -12,12 +12,12 @@ h6 {
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 48px;
   color: var(--headline-seconday-color);
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 36px;
   color: var(--headline-tertiary-color);
 }
 
@@ -31,7 +31,7 @@ h6 {
   font-size: 20px;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 840px) {
   h1,
   h2,
   h3,

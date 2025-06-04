@@ -1,36 +1,20 @@
 @use "sass:color";
 
-// colors
-$c_white: #fff;
-$c_light-grey: #f7f7f7;
-$c_medium-grey: #9b9b9b;
-$c_dark-grey: #4a4a4a;
-$c_dark-purple: #8925e7;
-$c_medium-purple: #bd10e0;
-$c_magenta: #ff3e81;
-
 :root {
-  --container-background-color: #{$c_white};
-  --header-title-background-color: #{$c_dark-purple};
-  --header-title-text-color: #{$c_white};
-  --footer-text-color: #{$c_medium-grey};
-  --post-text-color: #{$c_dark-grey};
-  --post-meta-text-color: #{$c_medium-grey};
+  --container-background-color: #303446;
+  --header-title-background-color: #7287fd;
+  --header-title-text-color: #fff;
+  --footer-text-color: #cad3f5;
+  --post-text-color: #c6d0f5;
+  --post-meta-text-color: #cad3f5;
 
-  --headline-base-color: #{color.adjust($c_dark-purple, $lightness: 10%)};
-  --headline-seconday-color: #{$c_magenta};
-  --headline-tertiary-color: #{$c_medium-purple};
+  --headline-base-color: #99d1db;
+  --headline-seconday-color: #e78284;
+  --headline-tertiary-color: #e5c890;
 
   --code-background-color: #24273a;
-  --code-text-color: #f5a97f;
+  --code-text-color: #ef9f76;
   --code-scrollback-background-color: #4a4a4a;
 
-  --blockquote-border-color: #{$c_dark-purple};
-}
-
-[data-theme="dark"] {
-  --container-background-color: #{color.adjust($c_dark-grey, $lightness: -20%)};
-  --post-text-color: #{$c_white};
-  --code-background-color: #24273a;
-  --code-text-color: #f5a97f;
+  --blockquote-border-color: #cba6f7;
 }
