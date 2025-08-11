@@ -1,20 +1,20 @@
 @use "sass:color";
 
 :root {
-  --container-background-color: #303446;
-  --header-title-background-color: #7287fd;
+  --container-background-color: #24293b;
+  --header-title-background-color: #ff9e64;
   --header-title-text-color: #fff;
-  --footer-text-color: #cad3f5;
-  --post-text-color: #c6d0f5;
+  --footer-text-color: #a9b1d6;
+  --post-text-color: #a9b1d6;
   --post-meta-text-color: #cad3f5;
 
-  --headline-base-color: #99d1db;
-  --headline-seconday-color: #e78284;
-  --headline-tertiary-color: #e5c890;
+  --headline-base-color: #9ece6a;
+  --headline-seconday-color: #f7768e;
+  --headline-tertiary-color: #e0af68;
 
-  --code-background-color: #24273a;
-  --code-text-color: #ef9f76;
+  --code-background-color: #24283b;
+  --code-text-color: #ff9e64;
   --code-scrollback-background-color: #4a4a4a;
 
-  --blockquote-border-color: #cba6f7;
+  --blockquote-border-color: #bb9af7;
 }
