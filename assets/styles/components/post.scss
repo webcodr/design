@@ -121,6 +121,11 @@
     padding: 5px;
   }
 
+  ol,
+  ul {
+    padding-right: 10px;
+  }
+
   tr {
     th:first-child {
       padding-left: 10px;
@@ -169,6 +174,11 @@
 
     p {
       padding: 0;
+    }
+
+    ol,
+    ul {
+      padding-right: 0;
     }
 
     .chroma code {
